@@ -1,0 +1,74 @@
+package br.com.database;
+
+import java.util.ArrayList;
+
+import br.com.pojos.*;
+
+public class Universidade {
+	private ArrayList<Turma> turmas;
+	
+	public void addTurma(String t) {
+		Turma T = new Turma();
+		T.setNomeMateria(t);
+		turmas.add(T);
+	}
+	
+	public String getAllMaterias() {
+			String resp = "{\"Turmas\" : [ }";
+			for(int i = 0 ; i  < turmas.size() ; i++) {
+				resp = resp+"\""+turmas.get(i).getNomeMateria()+", ";
+				resp = resp+"\"";
+			}
+			resp = resp + "] }";
+			return resp;
+	}
+	
+	public void addAluno(String turma , Aluno a) {
+		for(int i = 0 ; i < turmas.size() ; i++) {
+			Turma oldT = turmas.get(i);
+			if(oldT.getNomeMateria().equals(turma) ) {
+				for( int j = 0 ; j < oldT.getAluns().size() ; j++) {
+					if(oldT.getAluns().get(j).getMatricula() == a.getMatricula()) {
+						return;
+					}
+				}
+				turmas.get(i).getAluns().add(a);
+			}
+		}
+	}
+	
+	public void addProfessor(String turma , Professor  a) {
+		for(int i = 0 ; i < turmas.size() ; i++) {
+			Turma oldT = turmas.get(i);
+			if(oldT.getNomeMateria().equals(turma) ) {
+				for( int j = 0 ; j < oldT.getProfs().size() ; j++) {
+					if(oldT.getProfs().get(j).getMatricula() == a.getMatricula()) {
+						return;
+					}
+				}
+				turmas.get(i).getProfs().add(a);
+			}
+		}
+	}
+	
+	public String getAluno(String turma , int matricula) {
+		for(int i =0 ; i < turmas.size(); i++) {
+			if(turmas.get(i).getNomeMateria().equals(turma)) {
+				for(int j =0 ; j < turmas.get(i).getAluns().size() ; j++) {
+					if(turmas.get(i).getAluns().get(j).getMatricula() == matricula ){
+						return turmas.get(i).getAluns().get(j).toJson();
+					}
+				}
+			}
+			return "{}";
+		}
+		return "{}";
+	}	
+	public void removeMateria(String name) {
+		for(int i =0 ; i < turmas.size() ; i++) {
+			if(turmas.get(i).getNomeMateria().equals(name)) {
+				turmas.remove(i);
+			}
+		}
+	}
+}

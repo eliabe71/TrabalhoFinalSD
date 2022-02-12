@@ -1,0 +1,5 @@
+package br.com.database;
+
+public class Turma {
+	Professor []profs;
+}

@@ -1,0 +1,65 @@
+package br.com.database;
+
+import java.util.ArrayList;
+
+import br.com.pojos.*;
+
+public class Turma {
+	ArrayList<Professor> profs;
+	ArrayList<Aluno> aluns;
+	public Turma() {
+		this.aluns = new ArrayList<Aluno>();
+		this.profs = new ArrayList<Professor>(); 
+	}
+	public ArrayList<Professor> getProfs() {
+		return profs;
+	}
+	public void setProfs(ArrayList<Professor> profs) {
+		this.profs = profs;
+	}
+	public ArrayList<Aluno> getAluns() {
+		return aluns;
+	}
+	public Boolean addAluno( Aluno a) {
+		for( int i = 0 ; i< aluns.size() ; i++ ) {
+			if(aluns.get(i).getMatricula()== a.getMatricula()) {
+				return false;
+			}
+		}
+		aluns.add(a);
+		return true;
+	}
+	
+	public Boolean RemoveAluno( Aluno a) {
+		for( int i = 0 ; i< aluns.size() ; i++ ) {
+			if(aluns.get(i).getMatricula()== a.getMatricula()) {
+				aluns.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
+	public Boolean addProfessor( Professor a) {
+		for( int i = 0 ; i< aluns.size() ; i++ ) {
+			if(profs.get(i).getMatricula()== a.getMatricula()) {
+				return false;
+			}
+		}
+		aluns.add(a);
+		return true;
+	}
+	
+	public Boolean RemoveAluno( Aluno a) {
+		for( int i = 0 ; i< aluns.size() ; i++ ) {
+			if(aluns.get(i).getMatricula()== a.getMatricula()) {
+				aluns.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public void setAluns(ArrayList<Aluno> aluns) {
+		this.aluns = aluns;
+	}
+}

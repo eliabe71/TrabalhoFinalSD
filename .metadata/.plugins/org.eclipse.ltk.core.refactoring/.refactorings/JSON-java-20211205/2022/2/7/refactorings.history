@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;json&apos; to &apos;ServeEBJ/ejbModule/br.com.database&apos;&#x0D;&#x0A;- Original project: &apos;JSON-java-20211205&apos;&#x0D;&#x0A;- Destination element: &apos;ServeEBJ/ejbModule/br.com.database&apos;&#x0D;&#x0A;- Original element: &apos;json&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" destination="=ServeEBJ/ejbModule&lt;br.com.database" element1="src/main/java/org/json" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1644598933733" units="0" version="1.0"/>
+</session>

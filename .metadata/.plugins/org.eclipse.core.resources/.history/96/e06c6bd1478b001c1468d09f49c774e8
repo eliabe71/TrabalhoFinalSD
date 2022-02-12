@@ -1,0 +1,26 @@
+package br.com.database;
+
+import java.util.ArrayList;
+
+import br.com.pojos.*;
+
+public class Turma {
+	ArrayList<Professor> profs;
+	ArrayList<Aluno> aluns;
+	public Turma() {
+		this.aluns = new ArrayList<Aluno>;
+		this.profs = new ArrayList<Professor>; 
+	}v
+	public ArrayList<Professor> getProfs() {
+		return profs;
+	}
+	public void setProfs(ArrayList<Professor> profs) {
+		this.profs = profs;
+	}
+	public ArrayList<Aluno> getAluns() {
+		return aluns;
+	}
+	public void setAluns(ArrayList<Aluno> aluns) {
+		this.aluns = aluns;
+	}
+}

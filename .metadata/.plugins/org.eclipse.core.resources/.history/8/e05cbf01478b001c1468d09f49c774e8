@@ -1,0 +1,7 @@
+package br.com.database;
+
+import br.com.pojos.*;
+
+public class Turma {
+	Professor[] profs;
+}

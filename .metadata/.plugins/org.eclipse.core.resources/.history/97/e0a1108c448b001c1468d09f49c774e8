@@ -1,0 +1,6 @@
+package br.com.pojos;
+
+public class Professor extends Pessoa{
+	int matricula;
+	String area;
+}

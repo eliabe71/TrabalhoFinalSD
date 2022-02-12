@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.ejb.EJB"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="br.com.server.SessionBean"/>
+    <fullyQualifiedTypeName name="br.com.server.Eliabe"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="src.main.java.org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="org.json.JSONObject"/>
+    <fullyQualifiedTypeName name="br.com.database.Universidade"/>
+    <fullyQualifiedTypeName name="com.ibm.wsdl.util.IOUtils"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="br.com.pojos.Aluno"/>
+    <fullyQualifiedTypeName name="br.com.pojos.Professor"/>
+</qualifiedTypeNameHistroy>
